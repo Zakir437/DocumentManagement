@@ -1,0 +1,86 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.CabinetTileModelView>
+<link href="~/css/Document/folder.min.css" rel="stylesheet" />
+@if (Model.Any())
+{
+    var count = 0;
+    foreach (var doc in Model)
+    {
+        if (doc.IsFile == false)
+        {
+            <div class="ContentBox" oncontextmenu="return false">
+                <div class="box" data-id="@doc.FolderId" data-doctype="1" data-ftype="@doc.FolderType" data-count="@count" data-resid="@doc.Id">
+                    @if (doc.FolderType == 1)
+                    {
+                        <span class="k-icon"><img src="~/images/icon/cabinet.png" /></span>
+                    }
+                    else
+                    {
+                        <span class="k-icon k-i-folder color-folder"></span>
+                    }
+                    <br />
+                    @doc.Name
+                </div>
+            </div>
+            count++;
+        }
+        else
+        {
+            <div class="ContentBox" oncontextmenu="return false">
+                <div class="box" data-id="@doc.FileId" data-doctype="2" data-resid="@doc.Id">
+                    @if (doc.FileType == 1)
+                    {
+                        <span>
+                            <span class="k-icon k-i-image color-image"></span>
+                        </span>
+                    }
+                    else if (doc.FileType == 2)
+                    {
+                        <span>
+                            <span class="k-icon k-i-pdf color-pdf"></span>
+                        </span>
+                    }
+                    else if (doc.FileType == 3)
+                    {
+                        <span>
+                            <span class="k-icon k-i-word color-word"></span>
+                        </span>
+                    }
+                    else if (doc.FileType == 4)
+                    {
+                        <span>
+                            <span class="k-icon k-i-txt color-text"></span>
+                        </span>
+                    }
+                    else if (doc.FileType == 5)
+                    {
+                        <span>
+                            <span class="k-icon k-i-ppt color-ppt"></span>
+                        </span>
+                    }
+                    else if (doc.FileType == 6)
+                    {
+                        <span>
+                            <span class="k-icon k-i-excel color-excel"></span>
+                        </span>
+                    }
+                    <br />
+                    @doc.Name
+                </div>
+            </div>
+        }
+    }
+}
+else
+{
+    <div class="col-md-12">
+        <h5>There is no record to display</h5>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+
+

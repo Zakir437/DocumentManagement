@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "SignUp";
+    //Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/Account/account.min.css" rel="stylesheet" />
+<link href="~/lib/intl-tel-input-master/build/css/intlTelInput.min.css" rel="stylesheet" />
+<div class="signUp-page">
+    <h2 class="text-center"></h2><!--Logo-->
+    <div class="form">
+        <div class="form-group text-left">
+            <input type="text" id="name" name="name" placeholder="Name" required data-required-msg="Please enter name" />
+        </div>
+        <div class="form-group text-left">
+            <input type="email" id="email" name="email" required data-required-msg="Please enter email" pattern="^[a-zA-Z0-9._+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$" data-pattern-msg="Please enter valid email" placeholder="E-mail">
+            @*<div class="input-group">
+                <span class="input-group-btn">
+                    <button type="button" id="btnEmail" class="btn btn-default"><i class="fa fa-envelope"></i></button>
+                </span>
+            </div>*@
+            <span id="emailValidationMsg" class="k-widget k-invalid-msg" data-for="email"></span>
+        </div>
+        <div class="form-group text-left">
+            <input type="tel" id="phone" name="phone" data-required-msg="Please enter phone number" placeholder="01812-345678">
+            @*<div class="input-group">
+                <span class="input-group-btn">
+                    <button type="button" id="btnPhone" class="btn btn-default"><i class="fa fa-phone"></i></button>
+                </span>
+            </div>*@
+            <span id="phoneValidationMsg" class="k-widget k-invalid-msg" data-for="phone"></span>
+        </div>
+        <div class="form-group text-left">
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" data-required-msg="Please enter password" required validationMessage="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" placeholder="Password" />
+        </div>
+        <div class="form-group text-left">
+            <input type="password" id="confirmPassword" name="confirmPassword" required data-required-msg="Please enter confirm password" placeholder="Confirm Password" />
+        </div>
+        <div class="form-group">
+            <button class="btn" id="btnSignUp">Sign Up</button>
+            @*<p class="message">Already have an account? <a href="/Account/Login">Log In</a></p>
+            <h3 class="message">Sign Up terms & privacy policy</h3>*@
+        </div>
+        <div class="form-group">
+            <div id="divMessage"></div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/intl-tel-input-master/build/js/intlTelInput.min.js"></script>
+<script src="~/js/Account/SignUp.min.js"></script>

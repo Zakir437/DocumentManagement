@@ -1,0 +1,43 @@
+﻿.k-grid input
+{
+    width:100%;
+}
+.k-grid .btn {
+    margin: 3px;
+}
+.k-grid .k-grid-toolbar {
+    padding: .6em 0.4em 0.3em .6em;
+}
+.k-grid .k-button {
+    margin: 0.13em 0.16em;
+}
+.k-grid-content-h1 {
+    height: calc(100vh - 218px);
+}
+.k-grid-content-h2 {
+    height: calc(100vh - 267px);
+}
+.k-grid table {
+    border-collapse: collapse;
+}
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.k-alt, .k-pivot-layout > tbody > tr:first-child > td:first-child, .k-resource.k-alt, .k-separator {
+    background-color: #fff;
+}
+.table thead tr th {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.table tbody tr td, .table tbody tr th {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+.k-grid td
+{
+    border-width:0;
+}

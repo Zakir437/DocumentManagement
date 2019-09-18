@@ -1,0 +1,86 @@
+﻿@model DocumentManagement.ModelViews.Document.F2ModelView
+@Html.HiddenFor(m => m.F2Id)
+@Html.HiddenFor(m => m.C_countId)
+@Html.HiddenFor(m => m.F1_CountId)
+@Html.HiddenFor(m => m.F2_CountId)
+@{
+    ViewData["Title"] = "F2 Add";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/Document/cabinetCreate.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Cabinet', '/Document/CabinetTile' )">Cabinet</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('Cabinet Details', '/Document/CabinetTileDetails?q=@Model.CabinetId' )">@Model.CabinetName</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('F1 Details', '/Document/F1TileDetails?q=@Model.F1Id' )">@Model.F1Name</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('F2 Details', '/Document/F2TileDetails?q=@Model.F2Id' )">@Model.Name</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('F2 Add', '/Document/F2Add?q=@Model.F2Id' )">Add</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="card">
+        <div class="header">
+            <h4 class="col-deep-green"><strong>@Model.Name</strong></h4>
+        </div>
+        <div class="body" id="divForm">
+            <hr />
+            <div class="row form-group">
+                <div class="col-md-5">
+                    <dl class="dl-horizontal">
+                        <dt>Cabinet</dt>
+                        <dd>@Model.CabinetName</dd>
+                        <dt>Master Folder</dt>
+                        <dd>@Model.F1Name</dd>
+                        <dt>Status</dt>
+                        <dd>
+                            @if (Model.Status == 1)
+                            {
+                                <span class="status-label status-green shadow-style">Active</span>
+                            }
+                        </dd>
+                        <dt>Created By</dt>
+                        <dd>@Model.CreatedBy</dd>
+                        <dt>Created Date</dt>
+                        <dd>@Convert.ToDateTime(Model.CreatedDate).ToString("MMM dd-yyyy hh:mm:ss tt")</dd>
+                    </dl>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-xs-3"><h4>Folder</h4></div>
+                <div class="col-xs-9 text-right">
+                    <button class="btn btn-primary waves-effect" id="btnAdd" data-toggle="tooltip" title="Add Sub folder"><i class="fa fa-plus"></i> Add</button>
+                </div>
+            </div>
+            <hr />
+            <div class="row form-group">
+                <div class="col-md-6 col-md-offset-1" id="divFolder">
+                    <h4>Please add folder</h4>
+                </div>
+            </div>
+            <div class="row p-30">
+                <div class="col-md-6 col-md-offset-1">
+                    <button type="button" class="btn bg-green waves-effect" id="btnSave"><i class="fa fa-check"></i>&nbsp;Save</button>
+                    <button type="reset" class="btn  btn-info waves-effect" id="btnRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+                    <button type="button" class="btn bg-red waves-effect" id="btnCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/Document/f2Add.min.js"></script>

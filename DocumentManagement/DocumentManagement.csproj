@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>2e978d26-18ca-46e5-85a6-c5fc5b5d5b5d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\metronic-master\assets\global\scripts\metronic.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\lib\metronic-master\assets\global\scripts\metronic.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\metronic-master\assets\global\scripts\metronic.min.js" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="wwwroot\js\Document\cabinet.min.js" />
+    <Content Remove="wwwroot\js\Document\f2Delete.min.js" />
+    <Content Remove="wwwroot\js\Document\f2Rename.min.js" />
+    <Content Remove="wwwroot\js\Document\favourite.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\Document\cabinet.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\Document\f2Delete.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\Document\f2Rename.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\Document\favourite.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\metronic-master\assets\admin\layout\css\themes\darkblue.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="wwwroot\js\Document\cabinet.min.js" />
+    <None Include="wwwroot\js\Document\f2Delete.min.js" />
+    <None Include="wwwroot\js\Document\f2Rename.min.js" />
+    <None Include="wwwroot\js\Document\favourite.min.js" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.4" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Folder Include="wwwroot\Files\" />
+    <Folder Include="wwwroot\images\icon\" />
+  </ItemGroup>-->
+
+</Project>

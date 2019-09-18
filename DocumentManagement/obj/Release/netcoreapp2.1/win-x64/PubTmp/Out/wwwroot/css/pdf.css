@@ -1,0 +1,66 @@
+﻿.k-pdf-export * {
+    font-size: 9px;
+    line-height: 1.42857143;
+    color: black;
+}
+.k-pdf-export h4, .k-pdf-export h5 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.k-pdf-export h3 {
+    margin-bottom:0px;
+    margin-top:0px;
+    font-size: 14px;
+}
+.k-pdf-export label {
+    margin-bottom: 0px;
+}
+.k-pdf-export h4 label {
+    font-size: 10px;
+}
+.k-pdf-export h4 {
+    font-size: 11px;
+    font-weight: 500;
+    display: block;
+}
+.k-pdf-export .table
+{
+    color:#000000!important;
+    border:none!important;
+}
+.k-pdf-export .table thead {
+    border-left: 1px solid;
+}
+.k-pdf-export .table thead tr th {
+    border-left: none !important;
+}
+.k-pdf-export .table tbody tr td {
+    border-top: none !important;
+    border-left: none !important;
+}
+.k-pdf-export .table {
+    border-spacing: 0!important;
+    border-collapse: collapse!important;
+}
+.k-pdf-export .dl-horizontal dd {
+    margin-left: 115px !important;
+}
+.k-pdf-export .dl-horizontal dt {
+    width: 100px !important;
+}
+.k-pdf-export .panel-heading
+{
+    border-bottom:1px solid #333;
+    background-color:white!important;
+}
+.k-pdf-export .table tbody {
+    border-left: 1px solid #000000;
+}
+.k-pdf-export .panel {
+    border: 1px solid #000000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.k-pdf-export .panel-default {
+    border: 1px solid #000000 !important;
+}

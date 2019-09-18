@@ -1,0 +1,79 @@
+﻿@model DocumentManagement.ModelViews.Document.CabinetModelView
+@{ 
+    var count = 0;
+}
+<h4 class="col-deep-green"><strong>Cabinet</strong> : @Model.CabinetName</h4>
+@if (Model.F1List != null)
+{
+    foreach (var f1 in Model.F1List)
+    {
+        count++;
+        <div class="row form-group">
+            <div class="col-xs-11">
+                <div class="row form-group">
+                    <div class="col-xs-7" id="divF1_@count">
+                        <input type="text" pattern="^(?!\s*$).?[\w\W]{1,}" id="f1Name_@count" data-count="@count" name="f1Name_@count" value="@f1.Name" disabled required data-required-msg="*" validationMessage="*" placeholder="Master Folder Name" class="form-control" />
+                        <span class="k-widget k-invalid-msg" data-for="f1Name_@count"></span>
+                    </div>
+                    <div class="col-xs-3">
+                        <button type="button" class="btn btn-primary waves-effect m-t-3 btnEditF1" id="btnEditF1_@count" data-count="@count" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></button>
+                        <button type="button" class="btn btn-primary waves-effect m-t-3 btnUpdateF1 display-none" hidden id="btnUpdateF1_@count" data-id="@f1.F1Id" data-count="@count" data-toggle="tooltip" title="Update"><i class="fa fa-check"></i></button>
+                        <button type="button" class="btn btn-danger waves-effect m-t-3 btnDeleteF1" data-count="@count" data-id="@f1.F1Id" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></button>
+                    </div>
+                    @if (f1.F2List != null)
+                    {
+
+                        foreach (var f2 in f1.F2List)
+                        {
+                            count++;
+                            <div class="col-xs-11 col-xs-offset-1 m-t-10">
+                                <div class="row">
+                                    <div class="col-xs-7" id="divF2_@count">
+                                        <input type="text" pattern="^(?!\s*$).?[\w\W]{1,}" id="f2Name_@count" data-count="@count" name="f2Name_@count" value="@f2.Name" disabled required data-required-msg="*" validationMessage="*" placeholder="Folder Name" class="form-control" />
+                                        <span class="k-widget k-invalid-msg" data-for="f2Name_@count"></span>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <button type="button" class="btn btn-primary waves-effect m-t-3 btnEditF2" id="btnEditF2_@count" data-count="@count" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                        <button type="button" class="btn btn-primary waves-effect m-t-3 btnUpdateF2 display-none" hidden id="btnUpdateF2_@count" data-id="@f2.F2Id" data-count="@count" data-toggle="tooltip" title="Update"><i class="fa fa-check"></i></button>
+                                        <button type="button" class="btn btn-danger waves-effect m-t-3 btnDeleteF2" data-count="@count" data-id="@f2.F2Id" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></button>
+                                    </div>
+                                    @if (f2.F3List != null)
+                                    {
+                                        foreach (var f3 in f2.F3List)
+                                        {
+                                            count++;
+                                            <div class="col-xs-11 col-xs-offset-1 m-t-10">
+                                                <div class="row">
+                                                    <div class="col-xs-7" id="divF3_@count">
+                                                        <input type="text" pattern="^(?!\s*$).?[\w\W]{1,}" id="f3Name_@count" data-count="@count" name="f3Name_@count" value="@f3.Name" disabled required data-required-msg="*" validationMessage="*" placeholder="Sub Folder Name" class="form-control" />
+                                                        <span class="k-widget k-invalid-msg" data-for="f3Name_@count"></span>
+                                                    </div>
+                                                    <div class="col-xs-3">
+                                                        <button type="button" class="btn btn-primary waves-effect m-t-3 btnEditF3" id="btnEditF3_@count" data-count="@count" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                                        <button type="button" class="btn btn-primary waves-effect m-t-3 btnUpdateF3 display-none" hidden id="btnUpdateF3_@count" data-id="@f3.F3Id" data-count="@count" data-toggle="tooltip" title="Update"><i class="fa fa-check"></i></button>
+                                                        <button type="button" class="btn btn-danger waves-effect m-t-3 btnDeleteF3" data-id="@f3.F3Id" data-count="@count" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h5>There is no folder</h5>
+}
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>

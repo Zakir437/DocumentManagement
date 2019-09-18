@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.F3ModelView>
+@{
+    var count = 0;
+}
+@if (Model.Any())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Created By</th>
+                <th>Created Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count.</td>
+                    <td>@list.Name</td>
+                    <td>
+                        @if (list.Status == 1)
+                        {
+                            <span class="status-label status-green shadow-style">Active</span>
+                        }
+                    </td>
+                    <td>@list.CreatedBy</td>
+                    <td>@Convert.ToDateTime(list.CreatedDate).ToString("MMM dd-yyyy hh:mm:ss tt")</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm btnViewDetails" href="/Document/F3Details?q=@list.F3Id" data-toggle="tooltip" title="View details"><i class="fa fa-eye"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

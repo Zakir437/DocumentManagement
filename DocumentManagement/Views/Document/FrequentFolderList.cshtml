@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.CabinetTileModelView>
+<link href="~/css/Document/folder.min.css" rel="stylesheet" />
+@if (Model.Any())
+{
+    foreach (var list in Model)
+    {
+        <div class="ContentBox" oncontextmenu="return false">
+            <div class="box" data-folderid="@list.FolderId" data-type="@list.FolderType" data-id="@list.Id" data-ispined="@list.IsPined">
+                <div class="divActionBtn">
+                    @if (list.IsPined == true)
+                    {
+                        <span class="pinIcon"><i class="k-icon k-i-pin"></i></span>
+                    }
+                    else
+                    {
+                        <span class="pinIcon"><i class="k-icon"></i></span>
+                    }
+                    <span class="deleteIcon display-none" data-id="@list.Id"><i class="fa fa-times"></i></span>
+                </div>
+                <div class="divIcon"  data-folderid="@list.FolderId" data-type="@list.FolderType" data-id="@list.Id" data-ispined="@list.IsPined">
+                    @if (list.FolderType == 1)
+                    {
+                        <img src="~/images/icon/cabinet.png" />
+                    }
+                    else
+                    {
+                        <span class="k-icon k-i-folder color-folder"></span>
+                    }
+                    <br />
+                    @list.Name
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="col-md-12">
+        <h5>There is no record to display</h5>
+    </div>
+}
+
+
+
+

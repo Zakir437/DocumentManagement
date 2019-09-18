@@ -1,0 +1,145 @@
+﻿@media print{
+    @page
+    {
+        margin:0px 1cm;
+    }
+}
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+}
+h3
+{
+    margin:0px;
+}
+h4,h5,h6
+{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.btn-sm{
+    padding:3px 9px;
+    border-radius:0px;
+}
+.content-header {
+    text-align: center;
+}
+.content-header p {
+    margin: 0px !important;
+}
+p {
+    margin: 0px !important;
+}
+hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-top: 1px solid #000 !important;
+}
+dl
+{
+    margin-bottom:0px;
+}
+.table {
+    margin-bottom: 0px;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+}
+.dl-horizontal dt {
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd {
+    margin-left: 180px;
+}
+.dl-horizontal dd:before,
+.dl-horizontal dd:after {
+    display: table;
+    content: " ";
+}
+.dl-horizontal dd:after {
+    clear: both;
+}
+.dl-horizontal dd:before,
+.dl-horizontal dd:after {
+    display: table;
+    content: " ";
+}
+.dl-horizontal dd:after {
+    clear: both;
+}
+.margin-top-10
+{
+    margin-top:10px;
+}
+.table-bordered {
+    border: 1px solid #333 !important;
+}
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid #333 !important;
+}
+.file-icon-size {
+    font-size: 20px;
+}
+label {
+    margin-bottom: 0px;
+}
+.img-icon-color {
+    color: #30a9a4;
+}
+.pdf-icon-color {
+    color: #e21717;
+}
+.word-icon-color {
+    color: #4983f1;
+}
+
+.txt-icon-color {
+    color: #08a7b9;
+}
+
+.pp-icon-color {
+    color: #ec3c3c;
+}
+
+.excel-icon-color {
+    color: #0d8633;
+}
+
+.panel {
+    margin-bottom: 10px;
+}
+.panel h3, .panel h4, .panel h5, .panel h6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.panel hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.panel-body {
+    padding: 10px 15px;
+}
+.orderTitle {
+    color: #059883;
+}
+.iPanel {
+    margin-bottom: 10px;
+    border: 1px solid #333;
+}
+.iPanel-heading {
+    padding: 5px 15px;
+    border-bottom: 1px solid #000;
+}
+.ipanel-body
+{
+    padding:5px 15px;
+}
+
+
+
+

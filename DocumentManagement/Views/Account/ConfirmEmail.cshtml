@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "ConfirmEmail";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<link href="~/css/Account/account.min.css" rel="stylesheet" />
+<section class="container">
+    <div class="row margin-top-30">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="confirm-email-box text-center">
+                <h4 class="text-success">@ViewBag.Message</h4>
+                <p class="message">Back to <a href="/Account/Login">Log In</a></p>
+            </div>
+        </div>
+    </div>
+</section>

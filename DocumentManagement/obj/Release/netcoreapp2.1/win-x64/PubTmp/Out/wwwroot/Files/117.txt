@@ -1,0 +1,5 @@
+//add dbcontext
+Scaffold-DbContext "Server=SB-PC-03;Database=CoreDemoDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+//update command
+Scaffold-DbContext "Server=SB-PC-03;Database=CoreDemoDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\Data -Force

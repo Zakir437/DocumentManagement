@@ -1,0 +1,98 @@
+﻿@model DocumentManagement.ModelViews.Document.CabinetModelView
+@Html.HiddenFor(m => m.EncryptedId)
+@Html.HiddenFor(m => m.CountId)
+@{
+    ViewData["Title"] = "Cabinet Create";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/Document/cabinetCreate.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Cabinet', '/Document/CabinetTile' )">Cabinet</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            @if (Model != null)
+            {
+                <a onclick="onAjaxLoad('Cabinet Details', '/Document/CabinetTileDetails?q=@Model.EncryptedId' )">@Model.CabinetName</a>
+                <i class="fa fa-angle-right"></i>
+                <a onclick="onAjaxLoad('Cabinet Create', '/Document/CabinetCreate?q=@Model.EncryptedId' )">Add</a>
+            }
+            else
+            {
+                <a onclick="onAjaxLoad('Cabinet Create', '/Document/CabinetCreate' )">Create</a>
+            }
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="card">
+        <div class="header">
+            <h4 class="col-deep-green">
+                @if (Model != null)
+                {
+                    <strong>@Model.CabinetName</strong>
+                }
+                else
+                {
+                    <strong>Create cabinet</strong>
+                }
+            </h4>
+        </div>
+        <div class="body" id="divForm">
+            <hr />
+            <div class="row form-group">
+                <div class="col-md-5">
+                    @if (Model != null)
+                    {
+                        <dl class="dl-horizontal">
+                            <dt>Status</dt>
+                            <dd>
+                                @if (Model.Status == 1)
+                                {
+                                    <span class="status-label status-green shadow-style">Active</span>
+                                }
+                            </dd>
+                            <dt>Created By</dt>
+                            <dd>@Model.CreatedBy</dd>
+                            <dt>Created Date</dt>
+                            <dd>@Convert.ToDateTime(Model.CreatedDate).ToString("MMM dd-yyyy hh:mm:ss tt")</dd>
+                        </dl>
+                    }
+                    else
+                    {
+                        <div class="editor-label p-t-5 text-right col-md-3"><label for="cabinetName">Name</label></div>
+                        <div class="editor-field col-md-8">
+
+                            <input type="text" pattern="^(?!\s*$).?[\w\W]{1,}" minlength="1" id="cabinetName" name="cabinetName" required data-required-msg="Please enter cabinet name" validationMessage="Invalid" placeholder="Cabinet name" class="form-control" />
+                            <span class="k-widget k-invalid-msg" data-for="cabinetName"></span>
+                        </div>
+                    }
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-xs-3"><h4>Folder</h4></div>
+                <div class="col-xs-9 text-right">
+                    <button class="btn btn-primary waves-effect" id="btnCreateF1" data-toggle="tooltip" title="Add Master folder"><i class="fa fa-plus"></i> Add Folder</button>
+                </div>
+            </div>
+            <hr />
+            <div class="row form-group">
+                <div class="col-md-6 col-md-offset-1" id="divFolder">
+                    <h4>Please add folder</h4>
+                </div>
+            </div>
+            <div class="row p-30">
+                <div class="col-md-6 col-md-offset-1">
+                    <button type="button" class="btn bg-green waves-effect" id="btnSave"><i class="fa fa-check"></i>&nbsp;Save</button>
+                    <button type="reset" class="btn  btn-info waves-effect" id="btnRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+                    <button type="button" class="btn bg-red waves-effect" id="btnCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/Document/cabinetCreate.min.js"></script>

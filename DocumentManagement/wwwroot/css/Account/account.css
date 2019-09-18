@@ -1,0 +1,202 @@
+﻿.content {
+    /*min-height: calc(500px);*/
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 40px;
+    left: 0;
+    height: 480px;
+}
+.login-page, .signUp-page, .reset-page {
+    width: 360px;
+    margin: 20px auto;
+}
+
+    .login-page .com-logo, .signUp-page .com-logo, .reset-page .com-logo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+        .login-page .com-logo img, .signUp-page .com-logo img, .reset-page .com-logo img {
+            height: 40px;
+            width: 170px;
+        }
+
+@media (max-width: 440px) {
+    .login-page, .signUp-page, .reset-page {
+        width: auto;
+        margin: 20px auto;
+    }
+    .login-page, .signUp-page, .reset-page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    /*max-width: 360px;*/
+    margin: 0 auto 0px;
+    padding: 50px 25px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input[type=text], .form input[type=password], .form input[type=email], .form input[type=tel] {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    /*margin: 15px 0px 0px;*/
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.form h2 {
+    margin: 0px;
+}
+.form button:hover, .form button:active, .form button:focus {
+    background-color: #43A047;
+    color: #fff;
+}
+.form .message, .confirm-email-box .message {
+    margin: 15px 0 0;
+    /*color: #b3b3b3;*/
+    /*color:#333;*/
+    color: #3c763d;
+    font-size: 13px;
+}
+.form .message-danger {
+    margin: 15px 0 0;
+    color: #a94442;
+    font-size: 13px;
+}
+.form .message a {
+    color: #32a6f2;
+    text-decoration: none;
+}
+.input-group-btn button {
+    max-width: 45px;
+    background-color: #ccc;
+    padding: 16px 18px 14px 15px;
+}
+.btnSelected {
+    background: #b3b3b3;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    z-index: 2;
+    margin-left: 1px;
+}
+.input-group-btn button:hover, .input-group-btn button:active, .input-group-btn button:focus {
+    background: #b3b3b3;
+}
+body {
+    background: aliceblue;
+}
+.margin-top-30
+{
+    margin-top:30px;
+}
+.confirm-email-box {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    margin: 0 auto 100px;
+    padding: 20px 25px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+.validation-summary-errors {
+    border-color: #ffc000;
+    background-color: #ffc000;
+    color: #6b5100;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+.validation-summary-errors > ul {
+    list-style: none;
+    margin: 0px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+/*Footer Style*/
+.page-footer-fixed.page-footer-fixed-mobile .page-container {
+    margin-bottom: 20px !important;
+}
+
+@media (min-width: 992px) {
+    /* Page container in fixed footer */
+    .page-footer-fixed .page-container {
+        margin-bottom: 20px !important;
+    }
+}
+
+.page-footer-fixed .page-quick-sidebar-wrapper {
+    bottom: 33px;
+}
+
+.page-footer {
+    /*transition: margin 0.3s;*/
+}
+
+.page-footer {
+    padding: 8px 20px 5px 20px;
+    font-size: 12px;
+    height: 33px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-top: 1px solid #f1f1f1
+}
+
+.login-footer {
+    bottom: 0 !important;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    /*box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);*/
+}
+
+.page-footer:before, .page-footer:after {
+    content: " ";
+    display: table;
+}
+
+.page-footer:after {
+    clear: both;
+}
+
+.page-footer .page-footer-inner {
+    display: inline-block;
+}
+
+.page-footer-fixed.page-footer-fixed-mobile .page-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    bottom: 0;
+}
+
+.page-footer-fixed.page-footer-fixed-mobile.page-sidebar-fixed .page-footer {
+    margin-left: 0 !important;
+}
+
+.intl-tel-input.allow-dropdown input[type="tel"] {
+    padding-right: 27px;
+}
+
+.intl-tel-input {
+    display: inline!important;
+}

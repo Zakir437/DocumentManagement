@@ -1,0 +1,70 @@
+﻿@model DocumentManagement.ModelViews.Document.F2ModelView
+@Html.HiddenFor(m => m.F2Id)
+@Html.HiddenFor(m => m.C_countId)
+@Html.HiddenFor(m => m.F1_CountId)
+@Html.HiddenFor(m => m.F2_CountId)
+@{
+    ViewData["Title"] = "F2 Details";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/bg-page-content.min.css" rel="stylesheet" />
+<link href="~/css/Document/folderMenu.min.css" rel="stylesheet" />
+<link href="~/css/Document/treeview.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Cabinet', '/Document/CabinetTile' )">Cabinet</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('Cabinet Details', '/Document/CabinetTileDetails?q=@Model.CabinetId' )">@Model.CabinetName</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('F1 Details', '/Document/F1TileDetails?q=@Model.F1Id' )">@Model.F1Name</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('F2 Details', '/Document/F2TileDetails?q=@Model.F2Id' )">@Model.Name</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="card">
+        <div class="header">
+            <h3 class="col-deep-green"><strong>@Model.Name</strong> <button class="btn btn-primary btn-sm waves-effect pull-right btnSelect">Select</button> <button class="btn btn-primary btn-sm waves-effect pull-right btnUnSelect" style="display: none;">Un-select</button></h3>
+        </div>
+        <div class="body min-h-2" oncontextmenu="return false">
+            <div class="row form-group">
+                <div id="divF2DocList" class="min-h-1">
+                    <div class="loading_partial"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cmenu">
+    <ul class="cmenu-options"></ul>
+</div>
+@*<div id="divF2EditWin"></div>
+<div id="divRenameWin"></div>
+<div id="divDeleteWin"></div>
+<div id="divTreeview"></div>
+<div id="divPropertiesWin"></div>*@
+<input type="file" class="displayNone" name="files" id="files" multiple style="display:none" />
+<script id="temp_win_file_delete_entry" type="text/x-kendo-template">
+    <div style="padding:1em;">
+        <p style="font-size: 16px; padding: 0px" class="col-red">
+            #=msg# <br />
+            <div class="checkbox">
+                <label style="font-size:15px;"><input type="checkbox" id="keepCheckBox" name="keepCheckBox" style="width:20px">Keep Document</label>
+            </div>
+        </p>
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info waves-effect" id="btn_file_delete_Entry_noty_ok"><i class="fa fa-check"></i>&nbsp;OK</button>
+            <button type="button" class="btn btn-danger waves-effect" id="btn_file_delete_Entry_noty_cancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+        </div>
+    </div>
+</script>
+<script src="~/js/Document/Cabinet Tile/f2TileDetails.min.js"></script>

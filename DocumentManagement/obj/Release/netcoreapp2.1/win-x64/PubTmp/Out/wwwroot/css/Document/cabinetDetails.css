@@ -1,0 +1,6 @@
+﻿.page-content {
+    background-color: #f1f2f7;
+}
+.page-sidebar .page-sidebar-menu > li.active > a > .selected {
+    border-right: 12px solid #f1f2f7;
+}

@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "DragAndDrop";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #listB {
+        width: 300px;
+        height: 280px;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
+    .box
+    {
+        width:100px;
+        height:100px;
+        text-align:center;
+    }
+</style>
+<div class="card">
+    <div class="header">Drag and drop</div>
+    <div class="body" id="divFolder">
+        <div class="col-md-1">
+            <div id="f1" data-id="1" class="box">
+                <img src="~/images/icon/Folder-icon.png" /> Folder 1
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div id="f2" data-id="2" class="box">
+                <img src="~/images/icon/Folder-icon.png" /> Folder 2</div>
+        </div>
+        <div class="col-md-1">
+            <div id="f3" data-id="3" class="box">
+                <img src="~/images/icon/Folder-icon.png" /> Folder 3</div>
+        </div>
+        <div class="col-md-1">
+            <div id="f4" data-id="4" class="box">
+                <img src="~/images/icon/Folder-icon.png" /> Folder 4</div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".box").kendoDraggable({
+            hint: function (element) {
+                return element.clone();
+            }
+        });
+        $(".box").dblclick(function () {
+            $("#divFolder").empty();
+            $("#divFolder").append('<div class="col-md-1">' + 
+                '<div id="f5" data-id="1" class="box bg-teal" > Folder 1</div>' +
+                '</div>' +
+                '<div class="col-md-1">' +
+                    '<div id="f6" data-id="2" class="box bg-orange">Folder 2</div>' +
+                '</div>');
+        });
+
+        function droptargetOnDrop(e) {
+            //alert(e.sender.element.attr("data-id"));
+            //alert(e.draggable.element.attr("data-id"));
+        }
+
+        $(".box").kendoDropTarget({
+            drop: droptargetOnDrop
+        });
+    });
+</script>

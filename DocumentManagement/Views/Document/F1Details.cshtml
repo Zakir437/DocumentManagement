@@ -1,0 +1,120 @@
+﻿@model DocumentManagement.ModelViews.Document.F1ModelView
+@Html.HiddenFor(m => m.F1Id)
+@{
+    ViewData["Title"] = "F1 Details";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/Document/cabinetDetails.css" rel="stylesheet" />
+<link href="~/css/fileUpload.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Cabinet', '/Document/Cabinet' )">Cabinet</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('Cabinet Details', '/Document/CabinetDetails?q=@Model.CabinetId' )">Cabinet Details</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('F1 Details', '/Document/F1Details?q=@Model.F1Id' )">F1 Details</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="card">
+        <div class="header">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4><label class="col-deep-green">@Model.Name</label></h4>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pull-right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 clearfix">
+            <dl class="dl-horizontal">
+                <dt>Cabinet</dt>
+                <dd>@Model.CabinetName</dd>
+                <dt>Status</dt>
+                <dd>
+                    @if (Model.Status == 1)
+                    {
+                        <span class="status-label status-green shadow-style">Active</span>
+                    }
+                </dd>
+                <dt>Created By</dt>
+                <dd>@Model.CreatedBy</dd>
+                <dt>Created Date</dt>
+                <dd>@Convert.ToDateTime(Model.CreatedDate).ToString("MMM dd-yyyy hh:mm:ss tt")</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="card">
+        <div class="header">
+            <div class="row">
+                <div class="col-xs-3">
+                    <h4>List</h4>
+                </div>
+                <div class="col-xs-9">
+                    <div class="pull-right">
+                        <a href="/Document/F1Add?q=@Model.F1Id" class="btn btn-primary waves-effect btn-sm" data-toggle="tooltip" id="btnCreateFolder" title="Add new Folder"><i class="fa fa-plus"></i> Add Folder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div id="divF2List">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="header">
+            <div class="row">
+                <div class="col-xs-3">
+                    <h4>Files</h4>
+                </div>
+                <div class="col-xs-9">
+                    <div class="pull-right">
+                        <input type="file" class="displayNone" name="files" id="files" multiple style="display:none" />
+                        <label for="files" class="btn btn-primary waves-effect btn-sm" id="" data-toggle="tooltip" title="Add file"><i class="fa fa-plus"></i> Add Files</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="row display-none" id="divFileUpload">
+                <div id="divSelectedFile"></div>
+                <div class="col-md-12">
+                    <div class="pull-right">
+                        <button type="button" id="btnFileUpload" class="btn btn-info btn-sm margin-bottom" data-toggle="tooltip" title="Upload selected file"><i class="fa fa-upload"></i> Upload</button>
+                        <button type="button" id="btnFileUploadCancel" class="btn btn-default btn-sm margin-bottom" data-toggle="tooltip" title="Upload cancel"><i class="fa fa-times"></i> Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div id="divFileList"></div>
+        </div>
+    </div>
+</div>
+<div id="divFileArchiveWin"></div>
+<div id="divF2EditWin"></div>
+<div id="divDeleteWin"></div>
+<script id="temp_win_file_delete_entry" type="text/x-kendo-template">
+    <div style="padding:1em;">
+        <p style="font-size: 16px; padding: 0px" class="col-red">
+            #=msg# <br />
+            <div class="checkbox">
+                <label style="font-size:15px;"><input type="checkbox" id="keepCheckBox" name="keepCheckBox" style="width:20px">Keep Document</label>
+            </div>
+        </p>
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info waves-effect" id="btn_file_delete_Entry_noty_ok"><i class="fa fa-check"></i>&nbsp;OK</button>
+            <button type="button" class="btn btn-danger waves-effect" id="btn_file_delete_Entry_noty_cancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+        </div>
+    </div>
+</script>
+<script src="~/js/Document/f1Details.min.js"></script>

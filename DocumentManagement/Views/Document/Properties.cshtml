@@ -1,0 +1,14 @@
+﻿@Html.Hidden("PFileId", ViewBag.FileId, "")
+@Html.Hidden("PFolderId", ViewBag.FolderId, "")
+@Html.Hidden("PType", ViewBag.Type, "")
+@Html.Hidden("IsRrecycleBin", ViewBag.IsRecycleBin, "")
+<link href="~/css/Document/properties.min.css" rel="stylesheet" />
+<div class="k-window-body">
+    <div id="divProperties" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="button" class="btn bg-red waves-effect" id="btnProCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script src="~/js/Document/properties.min.js"></script>

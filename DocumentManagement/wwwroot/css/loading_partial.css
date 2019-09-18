@@ -1,0 +1,17 @@
+﻿/************************* FOR LOADING PAGE **********************************************************/
+.loading_partial {
+    background: url('../images/loading/loading-image.gif') no-repeat center center;
+    height: inherit;
+    min-height: inherit;
+}
+.tiny_loading { background: url('../images/loading/loading2.gif') no-repeat center center; height: inherit; min-height:inherit;}
+.loading {
+    background: url('../images/loading/loading2.gif') no-repeat center center;
+    height: 3em;
+}
+.loading_Content {
+    background: url('../images/loading/loading-image.gif') no-repeat center center;
+    height: calc(100vh - 88px);
+}
+
+

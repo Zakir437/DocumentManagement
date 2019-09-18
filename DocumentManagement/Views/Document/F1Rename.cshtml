@@ -1,0 +1,13 @@
+﻿@Html.Hidden("f1Id", ViewBag.Id, "")
+@Html.Hidden("Cid", ViewBag.Cid, "")
+<div class="k-window-body">
+    <div id="divF1RenameForm" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="button" class="btn  btn-primary waves-effect" id="btnF1RenameOk"><i class="fa fa-check"></i>&nbsp;Ok</button>
+    <button type="reset" class="btn  btn-info waves-effect" id="btnF1RenameRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+    <button type="button" class="btn bg-red waves-effect" id="btnF1RenameCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script src="~/js/Document/f1Rename.min.js"></script>

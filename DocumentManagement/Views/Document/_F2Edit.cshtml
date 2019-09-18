@@ -1,0 +1,36 @@
+﻿@model DocumentManagement.ModelViews.Document.F2ModelView
+@{
+    var count = 0;
+}
+<h4 class="col-deep-green"><strong>Folder</strong> : @Model.Name</h4>
+@if (Model.F3List != null)
+{
+    foreach (var f3 in Model.F3List)
+    {
+        count++;
+        <div class="col-xs-11">
+            <div class="row form-group">
+                <div class="col-xs-7" id="divF3_@count">
+                    <input type="text" pattern="^(?!\s*$).?[\w\W]{1,}" id="f3Name2_@count" data-count="@count" name="f3Name2_@count" value="@f3.Name" disabled required data-required-msg="*" validationMessage="*" placeholder="Sub Folder Name" class="form-control" />
+                    <span class="k-widget k-invalid-msg" data-for="f3Name2_@count"></span>
+                </div>
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary waves-effect m-t-3 btnEditF3" id="btn2EditF3_@count" data-count="@count" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-primary waves-effect m-t-3 btnUpdateF3 display-none" hidden id="btn2UpdateF3_@count" data-id="@f3.F3Id" data-count="@count" data-toggle="tooltip" title="Update"><i class="fa fa-check"></i></button>
+                    <button type="button" class="btn btn-danger waves-effect m-t-3 btnDeleteF3" data-id="@f3.F3Id" data-count="@count" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h5>There is no folder</h5>
+}
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
+

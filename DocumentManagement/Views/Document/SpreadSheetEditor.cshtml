@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "SpreadSheet Editor";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('SpreadSheet Editor', '/Document/SpreadSheetEditor' )">SpreadSheet Editor</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="col-md-12">
+        <h4><strong>Spreadsheet</strong></h4>
+        <div id="spreadsheet" style="width: 100%;"></div>
+    </div>
+    <div class="col-md-12">
+        <hr />
+        <h4><strong>Editor</strong></h4>
+        <textarea id="editor" rows="10" cols="30" style="height:440px" aria-label="editor"></textarea>
+    </div>
+</div>
+<script src="~/js/Document/Editor/spreadsheet.min.js"></script>

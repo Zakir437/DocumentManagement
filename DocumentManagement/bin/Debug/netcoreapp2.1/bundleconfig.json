@@ -1,0 +1,524 @@
+[
+  {
+    "outputFileName": "wwwroot/js/Document/documentList.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/documentList.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/docCreate.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/docCreate.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/DocumentDetails.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/DocumentDetails.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/docDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/docDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/processCreate.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/processCreate.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/processDetails.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/processDetails.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/processDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/processDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/subProcessCreate.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/subProcessCreate.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinet.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinet.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetCreate.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetCreate.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/cabinet.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/cabinet.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/cabinetCreate.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/cabinetCreate.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/cabinetDetails.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/cabinetDetails.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f1Details.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f1Details.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f2Details.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f2Details.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f3Details.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f3Details.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f1Add.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f1Add.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f2Add.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f2Add.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/HR/hrList.min.js",
+    "inputFiles": [
+      "wwwroot/js/HR/hrList.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/fileUpload.min.css",
+    "inputFiles": [
+      "wwwroot/css/fileUpload.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/fileArchive.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/fileArchive.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetEdit.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetEdit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/template.min.css",
+    "inputFiles": [
+      "wwwroot/css/template.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f1Edit.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f1Edit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f2Edit.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f2Edit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f1Delete.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f1Delete.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f2Delete.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f2Delete.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f3Delete.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f3Delete.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/generic.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/generic.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/recycle.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/recycle.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/page-content-color.min.css",
+    "inputFiles": [
+      "wwwroot/css/page-content-color.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetTile.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetTile.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/folder.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/folder.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Cabinet Tile/cabinet-tile-details.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Cabinet Tile/cabinet-tile-details.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Cabinet Tile/f1TileDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Cabinet Tile/f1TileDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Cabinet Tile/f2TileDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Cabinet Tile/f2TileDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Cabinet Tile/f3TileDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Cabinet Tile/f3TileDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Cabinet Tile/cabinetTile.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Cabinet Tile/cabinetTile.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/folderMenu.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/folderMenu.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Treeview/treeview.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Treeview/treeview.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/treeview.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/treeview.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Treeview/treeviewWithFiles.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Treeview/treeviewWithFiles.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/loading_partial.min.css",
+    "inputFiles": [
+      "wwwroot/css/loading_partial.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetRename.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetRename.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f1Rename.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f1Rename.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetDelete.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetDelete.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f2Rename.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f2Rename.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/f3Rename.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/f3Rename.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/fileRename.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/fileRename.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Account/Login.min.js",
+    "inputFiles": [
+      "wwwroot/js/Account/Login.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Account/ResetPassword.min.js",
+    "inputFiles": [
+      "wwwroot/js/Account/ResetPassword.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Account/SetNewPassword.min.js",
+    "inputFiles": [
+      "wwwroot/js/Account/SetNewPassword.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Account/SignUp.min.js",
+    "inputFiles": [
+      "wwwroot/js/Account/SignUp.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Configuration/Role/role.min.js",
+    "inputFiles": [
+      "wwwroot/js/Configuration/Role/role.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Configuration/Role/roleCreate.min.js",
+    "inputFiles": [
+      "wwwroot/js/Configuration/Role/roleCreate.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Configuration/Role/roleEdit.min.js",
+    "inputFiles": [
+      "wwwroot/js/Configuration/Role/roleEdit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Account/account.min.css",
+    "inputFiles": [
+      "wwwroot/css/Account/account.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/Template/E-mailTemplate.min.html",
+    "inputFiles": [
+      "wwwroot/Template/E-mailTemplate.html"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/Template/ResetPasswordTemplate.min.html",
+    "inputFiles": [
+      "wwwroot/Template/ResetPasswordTemplate.html"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Account/ConfirmOTP.min.js",
+    "inputFiles": [
+      "wwwroot/js/Account/ConfirmOTP.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Account/DeviceInfo.min.js",
+    "inputFiles": [
+      "wwwroot/js/Account/DeviceInfo.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Treeview/cabinetTreeview.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Treeview/cabinetTreeview.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/favourite.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/favourite.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/properties.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/properties.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Document/properties.min.css",
+    "inputFiles": [
+      "wwwroot/css/Document/properties.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Recycle/recycle.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Recycle/recycle.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Recycle/archive.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Recycle/archive.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/metronic-master/assets/admin/layout/css/themes/darkblue.min.css",
+    "inputFiles": [
+      "wwwroot/lib/metronic-master/assets/admin/layout/css/themes/darkblue.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/metronic-master/assets/admin/layout/css/layout.min.css",
+    "inputFiles": [
+      "wwwroot/lib/metronic-master/assets/admin/layout/css/layout.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/FileHistory/fileHistory.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/FileHistory/fileHistory.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/kendoGrid.min.css",
+    "inputFiles": [
+      "wwwroot/css/kendoGrid.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/FileHistory/fileHistoryPartial.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/FileHistory/fileHistoryPartial.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/cabinetTree.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/cabinetTree.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/storageInfo.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/storageInfo.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Hubs/messagingHub.min.js",
+    "inputFiles": [
+      "wwwroot/js/Hubs/messagingHub.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/metronic-master/assets/admin/layout/scripts/layout.min.js",
+    "inputFiles": [
+      "wwwroot/lib/metronic-master/assets/admin/layout/scripts/layout.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/metronic-master/assets/admin/layout/scripts/quick-sidebar.min.js",
+    "inputFiles": [
+      "wwwroot/lib/metronic-master/assets/admin/layout/scripts/quick-sidebar.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/metronic-master/assets/global/scripts/metronic.min.js",
+    "inputFiles": [
+      "wwwroot/lib/metronic-master/assets/global/scripts/metronic.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Editor/spreadsheet.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Editor/spreadsheet.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Configuration/SystemConfiguration/AllSystemConfiguration.min.js",
+    "inputFiles": [
+      "wwwroot/js/Configuration/SystemConfiguration/AllSystemConfiguration.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Document/Editor/documentEditor.min.js",
+    "inputFiles": [
+      "wwwroot/js/Document/Editor/documentEditor.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/jszip/jszip.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jszip/jszip.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/Home/index.min.js",
+    "inputFiles": [
+      "wwwroot/js/Home/index.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/HR/hrDetails.min.js",
+    "inputFiles": [
+      "wwwroot/js/HR/hrDetails.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/profile.min.css",
+    "inputFiles": [
+      "wwwroot/css/profile.css"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+﻿@Html.Hidden("FileId", ViewBag.FileId, "")
+@Html.Hidden("FolderId", ViewBag.FolderId, "")
+@Html.Hidden("IsCopy", ViewBag.IsCopy, "")
+@Html.Hidden("Type", ViewBag.Type, "")
+@Html.Hidden("EncryptId", ViewBag.EncryptId, "")
+@Html.Hidden("Documents", ViewBag.Documents, "")
+<div class="k-window-body">
+    <div id="divCabinetTreeView" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="button" class="btn bg-green waves-effect" id="btnTreeOk"><i class="fa fa-check"></i>&nbsp;Ok</button>
+    <button type="reset" class="btn  btn-info waves-effect" id="btnTreeRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+    <button type="button" class="btn bg-red waves-effect" id="btnTreeCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script src="~/js/Document/Treeview/cabinetTreeview.min.js"></script>

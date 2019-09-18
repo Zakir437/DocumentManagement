@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Generic Files";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/kendoGrid.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Generic Files', '/Document/Generic' )">Generic Files</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div id="divGenericGrid"></div>
+</div>
+<script type="text/x-kendo-template" id="GridHeadertemplate">
+    <div class="row">
+        <div class="col-md-4">
+            <input id="FileMultiselect" class="margin-bottom" />
+            <span class="k-icon k-i-search search-icon-left"></span>
+        </div>
+        <div class="col-md-4 pull-right">
+            <div class="pull-right">
+
+            </div>
+        </div>
+    </div>
+</script>
+<script id="temp_win_delete_entry" type="text/x-kendo-template">
+    <div style="padding:1em;">
+        <p style="font-size: 14px; padding: 10px" class="col-red"> #=msg# </p>
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info waves-effect" id="btn_delete_Entry_noty_ok"><i class="fa fa-check"></i>&nbsp;OK</button>
+            <button type="button" class="btn btn-danger waves-effect" id="btn_delete_Entry_noty_cancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+        </div>
+    </div>
+</script>
+<script id="btnTemplate" type="text/x-kendo-template">
+    @*<a class="btn btn-info waves-effect btn-sm btnViewDetails" href="/Document/CabinetDetails?q=#= encryptedId #" data-toggle="tooltip" title="View details"><i class="fa fa-eye"></i></a>*@
+    @*<a class="btn btn-primary waves-effect btn-sm btnAddFolder" href="/Document/CabinetCreate?q=#= encryptedId #" data-toggle="tooltip" title="Add Folder"><i class="fa fa-plus"></i></a>*@
+    @*<button type="button" class="btn btn-warning waves-effect btn-sm btnEdit" data-id="#= encryptedId #" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></button>*@
+</script>
+<script src="~/js/Document/generic.min.js"></script>

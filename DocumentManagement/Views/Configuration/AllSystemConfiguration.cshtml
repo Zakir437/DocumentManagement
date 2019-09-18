@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "All System Configuration";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .sb-settingspane-theme {
+        display: block;
+        height: 1px;
+        width: 1px;
+        position: absolute;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .sb-settingspane-theme-container {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: 1px solid #7a7a7a;
+        cursor: pointer;
+        margin-left: 1px;
+        margin-right: 14px;
+    }
+
+    .sb-settingspane-theme + .sb-settingspane-theme-selection::after {
+        content: '';
+        display: block;
+        width: 7px;
+        height: 13px;
+        border: solid #00bcf2;
+        border-width: 0 3px 3px 0;
+        margin-left: 8px;
+        margin-top: 3px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    fieldset {
+        margin-bottom: 15px;
+    }
+
+        fieldset legend {
+            font-size: 16px;
+        }
+</style>
+
+
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('All System Configuration', '/Configuration/AllSystemConfiguration' )">All System Configuration</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div id="divAllSystemConfiguration" class="card">
+        <div class="header">
+            <h4 class="col-deep-green">
+                <strong>All System Configuration</strong>
+            </h4>
+        </div>
+        <div class="body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <fieldset>
+                        <legend>Choose a theme</legend>
+                        <div id="divChoseTheme">
+                            @*<label>
+                                    <input class="sb-settingspane-theme" type="radio" name="theme" aria-label="Azure" aria-posinset="1" aria-setsize="4">
+                                    <span class="sb-settingspane-theme-container" title="Azure" style="background: rgb(0, 120, 212);"></span>
+                                </label>*@
+                            <label>
+                                <input class="sb-settingspane-theme" type="radio" name="theme" aria-label="Blue" data-name="Blue">
+                                <span class="sb-settingspane-theme-container" title="Blue" style="background: rgb(33, 91, 125);"></span>
+                            </label>
+                            <label>
+                                <input class="sb-settingspane-theme" type="radio" name="theme" aria-label="Light" data-name="Light" checked="checked">
+                                <span class="sb-settingspane-theme-container sb-settingspane-theme-selection" title="Light" style="background: rgb(241, 241, 248);"></span>
+                            </label>
+                            <label>
+                                <input class="sb-settingspane-theme" type="radio" name="theme" aria-label="Dark" data-name="Dark">
+                                <span class="sb-settingspane-theme-container" title="Dark" style="background: rgb(51, 51, 51);"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Font size</legend>
+                        <div id="divThemeFontSize">
+                            <span>
+                                <input id="dropdownFontSize" /><span> px</span>
+                            </span>
+                            <script>
+                                $("#dropdownFontSize").kendoDropDownList({
+                                    dataTextField: "text",
+                                    dataValueField: "value",
+                                    dataSource: [
+                                        { text: "12", value: "12" },
+                                        { text: "13", value: "13" },
+                                        { text: "14", value: "14" },
+                                        { text: "15", value: "15" },
+                                        { text: "16", value: "2" }
+                                    ],
+                                    index: 0,
+                                    //change: onChange
+                                });
+                            </script>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Chosse file/folder view</legend>
+                        <div id="divFileOrFolderView">
+                            <span>
+                                <input id="dropdownFileOrFolderView" />
+                            </span>
+                            <script>
+                                $("#dropdownFileOrFolderView").kendoDropDownList({
+                                    dataTextField: "text",
+                                    dataValueField: "value",
+                                    dataSource: [
+                                        { text: "List View", value: "tree" },
+                                        { text: "Tree View", value: "list" }
+                                    ],
+                                    index: 0,
+                                    //change: onChange
+                                });
+                            </script>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Upload file size</legend>
+                        <div id="divUploadFileSize">
+                            <span>
+                                <input type="number" min="1" max="200" class="k-textbox" id="dropdownUploadFileSize" placeholder="Enter file size" /><span> mb</span>
+                            </span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row p-30">
+                <div class="col-xs-12"><hr /></div>
+                <div class="col-md-6 col-md-offset-1">
+                    <button type="button" class="btn bg-green waves-effect" id="btnSave"><i class="fa fa-check"></i>&nbsp;Save</button>
+                    <button type="reset" class="btn  btn-info waves-effect" id="btnRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+                    <button type="button" class="btn bg-red waves-effect" id="btnCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+                </div>
+                <div class="col-xs-12"><hr /></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/Configuration/SystemConfiguration/AllSystemConfiguration.js"></script>

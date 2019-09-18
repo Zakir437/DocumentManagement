@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Document Editor";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Document Editor', '/Document/DocEditor' )">Document Editor</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    
+</div>
+<script src="~/js/Document/Editor/documentEditor.min.js"></script>

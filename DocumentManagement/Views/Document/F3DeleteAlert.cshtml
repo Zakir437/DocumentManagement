@@ -1,0 +1,14 @@
+﻿@Html.Hidden("F3IdInDelete", ViewBag.Id, "")
+@Html.Hidden("Type", ViewBag.Id, "")
+@Html.Hidden("IsMultiple", ViewBag.IsMultiple, "")
+@Html.Hidden("EncryptId", ViewBag.EncryptId, "")
+<div class="k-window-body">
+    <div id="divF3Delete" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="button" class="btn btn-info waves-effect" id="btnF3DeleteOk"><i class="fa fa-check"></i>&nbsp;OK</button>
+    <button type="button" class="btn bg-red waves-effect" id="btnF3DeleteCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script src="~/js/Document/f3Delete.min.js"></script>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.RecentFileModelView>
+@if (Model.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                <tr>
+                    <td>
+                        @if (list.FileType == 1)
+                        {
+                            <span class="k-icon k-i-image color-image"></span>
+                        }
+                        else if (list.FileType == 2)
+                        {
+                            <span class="k-icon k-i-pdf color-pdf"></span>
+                        }
+                        else if (list.FileType == 3)
+                        {
+                            <span class="k-icon k-i-word color-word"></span>
+                        }
+                        else if (list.FileType == 4)
+                        {
+                            <span class="k-icon k-i-txt color-text"></span>
+                        }
+                        else if (list.FileType == 5)
+                        {
+                            <span class="k-icon k-i-ppt color-ppt"></span>
+                        }
+                        else if (list.FileType == 6)
+                        {
+                            <span class="k-icon k-i-excel color-excel"></span>
+                        }
+                        @list.Name
+                    </td>
+                    <td>@list.Location</td>
+                    <td>
+                        <button class="btn btn-info waves-effect btn-sm btnView" data-id="@list.ProtectedId" data-type="@list.Type"><i class="fa fa-eye"></i></button>
+                        <button class="btn btn-danger waves-effect btn-sm btnDelete" data-id="@list.Id"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+
+

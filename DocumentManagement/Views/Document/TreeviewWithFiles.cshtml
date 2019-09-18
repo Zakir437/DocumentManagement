@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Treeview With Files";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/bg-page-content.min.css" rel="stylesheet" />
+<link href="~/css/Document/treeview.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Treeview With Files', '/Document/TreeviewWithFiles' )">Tree-View</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="card">
+        <div class="header">
+            <h3 class="col-deep-green"><strong>Cabinet</strong> treeview</h3>
+        </div>
+        <div class="body">
+            <div class="row form-group">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="divTreeview">
+                        <div id="divCabinetTreeView"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/Document/Treeview/treeviewWithFiles.min.js"></script>

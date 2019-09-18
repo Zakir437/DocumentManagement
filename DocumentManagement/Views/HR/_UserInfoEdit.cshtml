@@ -1,0 +1,24 @@
+﻿@model DocumentManagement.ModelViews.HR.UserModelView
+<label for="MobileNumber">Mobile Number</label>
+<div class="form-group">
+    <input type="text" id="MobileNumber" name="MobileNumber" value="@Model.MobileNumber" placeholder="Mobile number" />
+    @Html.ValidationMessage("MobileNumber", "", new { @class = "text-Danger" })
+</div>
+<label for="DOB">Date of Birth</label>
+<div class="form-group">
+    @if (Model.DOB != null)
+    {
+        <input id="DOB" name="DOB" value="@Model.DOB.Value.ToString("MMM dd yyyy")"  placeholder="Date of Birth" required data-required-msg="Please enter date of birth." style="width:100%" title="Date of Birth" />
+    }
+    else
+    {
+        <input id="DOB" name="DOB" required data-required-msg="Please enter date of birth." placeholder="Date of Birth" style="width:100%" title="Date of Birth" />
+    }
+    <span class="k-widget k-invalid-msg" data-for="DOB"></span>
+</div>
+<label for="Role">Role</label>
+<div class="form-group">
+    <input id="Role" name="Role" value="@Model.RoleId" style="width:100%" required data-required-msg="Please select role." />
+    <span class="k-widget k-invalid-msg" data-for="orderTypeDropdown"></span>
+</div>
+<script src="~/js/HR/infoEditPartial.min.js"></script>

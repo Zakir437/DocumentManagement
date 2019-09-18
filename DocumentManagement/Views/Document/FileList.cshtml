@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DocumentManagement.Models.Data.Files>
+@{
+    var count = 0;
+}
+@if (Model.Any())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th width="50px">#</th>
+                <th>Name</th>
+                <th width="143px">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count.</td>
+                    <td>
+                        @if (list.FileType == 1)
+                        {
+                            <i class="k-icon k-i-image file-icon-size img-icon-color"></i>
+                        }
+                        else if (list.FileType == 2)
+                        {
+                            <i class="k-icon k-i-file-pdf file-icon-size pdf-icon-color"></i>
+                        }
+                        else if (list.FileType == 3)
+                        {
+                            <i class="k-icon k-i-file-word file-icon-size word-icon-color"></i>
+                        }
+                        else if (list.FileType == 4)
+                        {
+                            <i class="k-icon k-i-file-txt file-icon-size txt-icon-color"></i>
+                        }
+                        else if (list.FileType == 5)
+                        {
+                            <i class="k-icon k-i-file-ppt file-icon-size pp-icon-color"></i>
+                        }
+                        else if (list.FileType == 6)
+                        {
+                            <i class="k-icon k-i-file-excel file-icon-size excel-icon-color"></i>
+                        }
+                        @list.OriginalName
+                    </td>
+                    <td>
+                        <input type="file" class="display-none replaceFile" data-id="@list.Id" name="replaceFile_@list.Id" id="replaceFile_@list.Id" style="display:none" />
+                        <label for="replaceFile_@list.Id" class="btn btn-warning btn-sm waves-effect  margin-bottom" data-toggle="tooltip" title="File replace"><i class="fa fa-retweet"></i></label>
+                        <button type="button" data-id="@list.Id" class="btn btn-danger btn-sm waves-effect btnFileDelete margin-bottom" data-toggle="tooltip" title="File delete"><i class="fa fa-trash"></i></button>
+                        @if (list.IsArchive == true)
+                        {
+                            <button type="button" data-id="@list.Id" class="btn btn-info btn-sm waves-effect btnViewArchive margin-bottom" data-toggle="tooltip" title="Archive list"><i class="fa fa-archive"></i></button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
+
+

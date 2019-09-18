@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.FileAuditLogModelView>
+@{
+    var count = 0;
+}
+@if (Model.Any())
+{
+    <h4 class="col-deep-green"><strong>Name :</strong> @ViewBag.Name</h4>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Operation</th>
+                <th width="300px">Message</th>
+                <th>Status</th>
+                <th>Created By</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                count++;
+            <tr>
+                <td>@count.</td>
+                <td>@list.Operation</td>
+                <td>@list.Message</td>
+                <td>
+                    @if (list.Status == true)
+                    {
+                        <span>Success</span>
+                    }
+                    else
+                    {
+                        <span>Error</span>
+                    }
+                </td>
+                <td>@list.CreatedBy</td>
+                <td>@Convert.ToDateTime(list.CreatedDate).ToString("MMM dd,yyyy hh:mm:ss tt")</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+

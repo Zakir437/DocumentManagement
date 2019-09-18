@@ -1,0 +1,91 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.displayNone {
+    display: none;
+}
+
+.margin-bottom {
+    margin-bottom: 5px;
+}
+
+.overflow-x {
+    overflow-x: auto;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.search-icon-left {
+    margin-top: -28px;
+    margin-left: 8px;
+    display: block;
+    float: left;
+}
+
+.margin-top-minus-7 {
+    margin-top: -7px;
+}
+
+.k-multiselect-clearable .k-multiselect-wrap {
+    padding-left: 1.8em;
+}
+
+.k-multiselect-wrap .k-input {
+    text-indent: 0.1em;
+}
+
+.pagination {
+    margin: 5px 0 0 0;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.divTable {
+    overflow: auto;
+    margin-bottom: 5px;
+    height: calc(100vh - 211px);
+}
+
+.divTable table {
+    margin-bottom: 0px;
+}
+

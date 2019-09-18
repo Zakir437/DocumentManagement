@@ -1,0 +1,20 @@
+﻿@model DocumentManagement.ModelViews.Document.PropertiesModelView
+<dl class="dl-horizontal">
+    <dt>Name</dt>
+    <dd>@Model.Name</dd>
+    <dt>Type</dt>
+    <dd>@Model.Type</dd>
+    <dt>Location</dt>
+    <dd>@Model.Location</dd>
+    <dt>Size</dt>
+    <dd>@Model.Size</dd>
+    @if (Model.IsFile == false)
+    {
+        <dt>Contains</dt>
+        <dd>@Model.Contains</dd>
+    }
+    <dt>Created By</dt>
+    <dd>@Model.CreatedBy</dd>
+    <dt>Created</dt>
+    <dd>@Convert.ToDateTime(Model.CreatedDate).ToString("MMMM dd,yyyy hh:mm:ss tt")</dd>
+</dl>

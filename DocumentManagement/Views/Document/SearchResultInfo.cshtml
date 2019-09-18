@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.SearchResultModelView>
+@{
+    var count = 0;
+}
+@if (Model.Any())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Location</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count.</td>
+                    <td>@list.Name</td>
+                    <td>
+                        @if (list.IsFile == true)
+                        {
+                            if (list.FileType == 1)
+                            {
+                                <span>Image</span>
+                            }
+                            else if (list.FileType == 2)
+                            {
+                                <span>Pdf</span>
+                            }
+                            else if (list.FileType == 3)
+                            {
+                                <span>Word Document</span>
+                            }
+                            else if (list.FileType == 4)
+                            {
+                                <span>Text Document</span>
+                            }
+                            else if (list.FileType == 5)
+                            {
+                                <span>Powerpoint</span>
+                            }
+                            else if(list.FileType == 6)
+                            {
+                                <span>Excel</span>
+                            }
+                        }
+                        else
+                        {
+                            @if (list.Type == 1)
+                            {
+                                <span>Cabinet</span>
+                            }
+                            else
+                            {
+                                <span>Folder</span>
+                            }
+                        }
+                    </td>
+                    <td>@list.Location</td>
+                    <td>
+                        <button class="btn btn-info waves-effect btn-sm btnView" data-isfile="@list.IsFile" data-id="@list.ProtectedId" data-type="@list.Type"><i class="fa fa-eye"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+
+

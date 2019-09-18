@@ -1,0 +1,14 @@
+﻿@Html.Hidden("F1IdInDel", ViewBag.Id, "")
+@Html.Hidden("IsPartial", ViewBag.IsPartial, "")
+@Html.Hidden("IsMultiple", ViewBag.IsMultiple, "")
+@Html.Hidden("EncryptId", ViewBag.EncryptId, "")
+<div class="k-window-body">
+    <div id="divF1Delete" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="button" class="btn btn-info waves-effect" id="btnF1DeleteOk"><i class="fa fa-check"></i>&nbsp;OK</button>
+    <button type="button" class="btn bg-red waves-effect" id="btnF1DeleteCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script src="~/js/Document/f1Delete.min.js"></script>

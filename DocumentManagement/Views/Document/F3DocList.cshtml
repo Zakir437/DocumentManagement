@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.CabinetTileModelView>
+<link href="~/css/Document/folder.min.css" rel="stylesheet" />
+@if (Model.Any())
+{
+    foreach (var doc in Model)
+    {
+        <div class="ContentBox" oncontextmenu="return false">
+            <div class="box" data-id="@doc.FileId" data-encid="@doc.EncryptFildId">
+                <div class="divActionBtn"></div>
+                @if (doc.FileType == 1)
+                {
+                    <span class="k-icon k-i-image color-image"></span>
+                }
+                else if (doc.FileType == 2)
+                {
+                    <span class="k-icon k-i-pdf color-pdf"></span>
+                }
+                else if (doc.FileType == 3)
+                {
+                    <span class="k-icon k-i-word color-word"></span>
+                }
+                else if (doc.FileType == 4)
+                {
+                    <span class="k-icon k-i-txt color-text"></span>
+                }
+                else if (doc.FileType == 5)
+                {
+                    <span class="k-icon k-i-ppt color-ppt"></span>
+                }
+                else if (doc.FileType == 6)
+                {
+                    <span class="k-icon k-i-excel color-excel"></span>
+                }
+                <br />
+                @doc.Name
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="col-md-12">
+        <h5>There is no record to display</h5>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+
+
+

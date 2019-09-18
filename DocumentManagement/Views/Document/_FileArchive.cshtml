@@ -1,0 +1,64 @@
+﻿@model IEnumerable<DocumentManagement.Models.Data.Files>
+@{
+    var count = 0;
+}
+@if (Model.Any())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count.</td>
+                    <td>
+                        @if (list.FileType == 1)
+                        {
+                            <i class="fa fa-file-image-o file-icon-size img-icon-color"></i>
+                        }
+                        else if (list.FileType == 2)
+                        {
+                            <i class="fa fa-file-pdf-o file-icon-size pdf-icon-color"></i>
+                        }
+                        else if (list.FileType == 3)
+                        {
+                            <i class="fa fa-file-word-o file-icon-size word-icon-color"></i>
+                        }
+                        else if (list.Type == 4)
+                        {
+                            <i class="k-icon k-i-file-txt file-icon-size txt-icon-color"></i>
+                        }
+                        else if (list.FileType == 5)
+                        {
+                            <i class="k-icon k-i-file-ppt file-icon-size pp-icon-color"></i>
+                        }
+                        else if (list.FileType == 6)
+                        {
+                            <i class="k-icon k-i-file-excel file-icon-size excel-icon-color"></i>
+                        }
+                        @list.OriginalName
+                    </td>
+                    <td>
+                        <button type="button" data-id="@list.Id" class="btn btn-warning btn-sm waves-effect btnFileRestore" data-toggle="tooltip" title="Restore"><i class="fa fa-retweet"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

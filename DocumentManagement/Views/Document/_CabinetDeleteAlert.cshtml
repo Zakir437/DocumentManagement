@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DocumentManagement.Models.Data.Files>
+@if (Model.Any())
+{
+    <h4 class="col-red">Are you sure want to delete cabinet with files?</h4>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><label style="cursor:pointer"><input type="checkbox" style="width:14px; cursor:pointer;" checked id="checkAll" /> Select</label></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                <tr>
+                    <td><label style="cursor:pointer"><input type="checkbox" class="check" data-id="@list.Id" id="check_@list.Id" style="width:14px; cursor:pointer;" checked /> @list.OriginalName</label> </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h4 class="col-red">Are you sure want to delete this cabinet?</h4>
+    <p>There is no files</p>
+}
+

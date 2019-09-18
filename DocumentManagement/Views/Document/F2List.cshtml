@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.F2ModelView>
+@{
+    var count = 0;
+}
+@if (Model.Any())
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Created By</th>
+                <th>Created Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count.</td>
+                    <td>@list.Name</td>
+                    <td>
+                        @if (list.Status == 1)
+                        {
+                            <span class="status-label status-green shadow-style">Active</span>
+                        }
+                    </td>
+                    <td>@list.CreatedBy</td>
+                    <td>@Convert.ToDateTime(list.CreatedDate).ToString("MMM dd-yyyy hh:mm:ss tt")</td>
+                    <td>
+                        <a class="btn btn-info waves-effect btn-sm btnViewDetails" href="/Document/F2Details?q=@list.F2Id" data-toggle="tooltip" title="View details"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-primary waves-effect btn-sm btnAddSub" href="/Document/F2Add?q=@list.F2Id" data-toggle="tooltip" title="Add Sub Folder"><i class="fa fa-plus"></i></a>
+                        <button type="button" class="btn btn-warning waves-effect btn-sm btnEditF2" data-id="@list.F2Id" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>There is no record to display</h5>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

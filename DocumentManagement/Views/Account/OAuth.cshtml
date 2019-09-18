@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "OAuth";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<style>
+    .page-footer {
+        display: none;
+    }
+    .div-oauth .oauth-middle-text {
+        text-align: center;
+        margin-top: calc(100vh - 50vh);
+    }
+</style>
+<div class="div-oauth">
+    <h3 class="oauth-middle-text">Verifying your identity...</h3>
+</div>
+<script>
+    (function () {
+        //console.log("oauth");
+        //ipInfo();//call for log device and ip info
+        setTimeout(function () {
+            location.href = "/";//redirect to home
+        }, 500);
+    })();
+</script>

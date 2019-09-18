@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Role Create";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/form.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Role Create', '/Configuration/RoleCreate' )">Create New Role</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form class="form roleCreateForm" role="form" method="post">
+                    <h3 class="text-center">Create New Role</h3>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" placeholder="Role name" autofocus autocomplete="off" />
+                        <span class="k-widget k-invalid-msg" data-for="name"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="btnSubmit" class="btn btn-success">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/Configuration/Role/roleCreate.min.js"></script>
+

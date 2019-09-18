@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "File History";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/kendoGrid.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('File History', '/Document/FileHistory' )">History</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div id="divFileHistoryGrid"></div>
+</div>
+<script src="~/js/Document/FileHistory/fileHistory.min.js"></script>

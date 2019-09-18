@@ -1,0 +1,40 @@
+﻿#divCabinetTreeView {
+    /*padding: 15px;*/
+}
+#divCabinetTreeView .k-sprite {
+    background-image: url('../../images/icon/coloricons-sprite.png');
+}
+.divTreeview {
+    min-height: 300px;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.08), 0 3px 6px rgba(0,0,0,.08);
+}
+.divTreeview img {
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.rootfolder {
+    background-position: 0 0;
+}
+.folder {
+    background-position: 0 -16px;
+}
+.pdf {
+    background-position: 0 -32px;
+}
+.html {
+    background-position: 0 -48px;
+}
+.image {
+    background-position: 0 -64px;
+}

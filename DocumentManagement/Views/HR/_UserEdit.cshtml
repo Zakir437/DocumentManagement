@@ -1,0 +1,5 @@
+﻿<label for="name">Name</label>
+<div class="form-group">
+    <input type="text" id="name" name="name" value="@ViewBag.Name" />
+    @Html.ValidationMessage("name", "", new { @class = "text-Danger" })
+</div>

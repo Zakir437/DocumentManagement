@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DocumentManagement.ModelViews.Document.CabinetModelView>
+<link href="~/css/Document/folder.min.css" rel="stylesheet" />
+@if (Model.Any())
+{
+    foreach (var cabinet in Model)
+    {
+        <div class="ContentBox" oncontextmenu="return false">
+            <div class="box" data-id="@cabinet.EncryptedId" data-count="@cabinet.CountId">
+                <img src="~/images/icon/cabinet2.png" /><br />
+                @cabinet.CabinetName
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="col-md-12" id="divEmpty">
+        <h5>There is no record to display</h5>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

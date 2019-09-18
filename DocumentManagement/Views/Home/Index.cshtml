@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li style="display:none!important;">
+            <span>ContentRootPath: @ViewBag.ContentRootPath</span><br />
+            <span>WebRootPath: @ViewBag.WebRootPath</span><br />
+            <span>EnvironmentName: @ViewBag.EnvironmentName</span><br />
+        </li>
+        <li>
+            <i class="fa fa-home"></i>
+            <a onclick="onAjaxLoad('Dashboard', '/Home/Index')">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a onclick="onAjaxLoad('Dashboard', '/Home/Index')">Dashboard</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Frequent Folders</h3>
+        </div>
+        <div class="panel-body">
+            <div id="divFrequentFolder" class="table-responsive min-h-200" oncontextmenu="return false">
+                <div class="loading_partial"></div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Recent Files</h3>
+        </div>
+        <div class="panel-body">
+            <div id="divRecentFiles" class="table-responsive min-h-200">
+                <div class="loading_partial"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cmenu">
+    <ul class="cmenu-options"></ul>
+</div>
+<script id="temp_win_delete_entry" type="text/x-kendo-template">
+    <div style="padding:1em;">
+        <p style="font-size: 14px; padding: 10px" class="col-red"> #=msg# </p>
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info waves-effect" id="btn_delete_Entry_noty_ok"><i class="fa fa-check"></i>&nbsp;OK</button>
+            <button type="button" class="btn btn-danger waves-effect" id="btn_delete_Entry_noty_cancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+        </div>
+    </div>
+</script>
+<script src="~/js/Home/index.min.js"></script>

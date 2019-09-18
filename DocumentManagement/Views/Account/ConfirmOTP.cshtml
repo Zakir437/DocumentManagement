@@ -1,0 +1,85 @@
+﻿@model DocumentManagement.ModelViews.Account.ConfirmOTPModel
+@{
+    ViewData["Title"] = "ConfirmOTP";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<link href="~/css/Account/account.min.css" rel="stylesheet" />
+<style>
+    .OTP_Code_Check {
+        display: none;
+    }
+
+    .iHaveACode, .codeSendBack {
+        cursor: pointer;
+    }
+</style>
+<div class="reset-page">
+    <h2 class="text-center">Logo</h2>
+    @if (Model.Error == true)
+    {
+        <div class="form">
+            <div class="text-center">
+                <p><strong class="text-danger">Bad request.</strong></p>
+            </div>
+            <div class="form-group">
+                <p class="message">Back to <a href="/Account/LogOff">Login</a></p>
+            </div>
+            <div class="form-group">
+                <div id="divMessage"></div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form">
+            <div class="hidden">
+                <input type="hidden" id="UserName" name="UserName" value="@Model.UserName" autocomplete="off" readonly>
+                <input type="hidden" id="Password" name="Password" value="@Model.Password" autocomplete="off" readonly>
+                <input type="hidden" id="IsLoginBefore" name="IsLoginBefore" value="@Model.IsLoginBefore" autocomplete="off" readonly>
+                <input type="hidden" id="RememberMe" name="RememberMe" value="@Model.RememberMe" autocomplete="off" readonly>
+                <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="@Model.ReturnUrl" autocomplete="off" readonly>
+
+                <input type="hidden" id="Browser" name="Browser" value="@Model.ReturnUrl" autocomplete="off" readonly>
+                <input type="hidden" id="DeviceOS" name="DeviceOS" value="@Model.ReturnUrl" autocomplete="off" readonly>
+                <input type="hidden" id="IPAddress" name="IPAddress" value="@Model.ReturnUrl" autocomplete="off" readonly>
+                <input type="hidden" id="City" name="City" value="@Model.ReturnUrl" autocomplete="off" readonly>
+                <input type="hidden" id="Country" name="Country" value="@Model.ReturnUrl" autocomplete="off" readonly>
+            </div>
+            <div class="OTP_Number_Check">
+                <div class="text-left">
+                    <h3>Verify your mobile number</h3>
+                    <p>A verification code will send to <span>@Model.MobileNumber</span>****‎. To verify that this is your mobile number, enter the last 4 digits.</p>
+                </div>
+                <div class="form-group text-left">
+                    <input type="text" id="last4digit" name="last4digit" required data-required-msg="Last 4 digit of your given mobile number" pattern="^[0-9]{4}$" data-pattern-msg="Please enter only last 4 digit" placeholder="Last 4 digit of your mobile number" autocomplete="off">
+                    <span class="k-widget k-invalid-msg" data-for="last4digit"></span>
+                </div>
+                <div class="form-group">
+                    <button id="btn4DigitSend" class="btn">Send Code</button>
+                    <a class="iHaveACode">I have a code</a>
+                    <p class="message">Back to <a href="/Account/LogOff">Login</a></p>
+                </div>
+            </div>
+            <div class="OTP_Code_Check">
+                <div class="form-group text-left">
+                    <input type="text" id="verificationCode" name="verificationCode" required data-required-msg="Please enter the verification code" pattern="^[0-9]{6}$" data-pattern-msg="6 digit verification code only" placeholder="Code" autocomplete="off">
+                    <span class="k-widget k-invalid-msg" data-for="verificationCode"></span>
+                </div>
+                <div class="form-group text-left">
+                    <div class="checkbox">
+                        <label><input type="checkbox" class="checkbox" id="SaveBrowser" name="SaveBrowser">Save Browser</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button id="btnVerifyCodeSend" class="btn">Submit</button>
+                    <a class="codeSendBack">Back</a>
+                    <p class="message">Back to <a href="/Account/LogOff">Login</a></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="divMessage"></div>
+            </div>
+        </div>
+    }
+</div>
+<script src="~/js/Account/ConfirmOTP.min.js"></script>

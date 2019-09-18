@@ -1,0 +1,25 @@
+﻿@Html.Hidden("cabinetId", ViewBag.Id, "")
+<div class="k-window-body">
+    <div id="divCabinetList" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="reset" class="btn  btn-info waves-effect" id="btnCabinetRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+    <button type="button" class="btn bg-red waves-effect" id="btnCabinetCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script id="temp_win_F1_delete_entry" type="text/x-kendo-template">
+    <div style="padding:1em;">
+        <p style="font-size: 16px; padding: 0px" class="col-red">
+            #=msg# <br />
+            <div class="checkbox">
+                <label style="font-size:15px;"><input type="checkbox" id="keepCheckBox" name="keepCheckBox" style="width:20px">Keep Document</label>
+            </div>
+        </p>
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info waves-effect" id="btn_F1_delete_Entry_noty_ok"><i class="fa fa-check"></i>&nbsp;OK</button>
+            <button type="button" class="btn btn-danger waves-effect" id="btn_F1_delete_Entry_noty_cancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+        </div>
+    </div>
+</script>
+<script src="~/js/Document/cabinetEdit.min.js"></script>

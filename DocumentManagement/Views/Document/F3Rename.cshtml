@@ -1,0 +1,15 @@
+﻿@Html.Hidden("f3Id", ViewBag.Id, "")
+@Html.Hidden("f2Id", ViewBag.F2id, "")
+@Html.Hidden("f1Id", ViewBag.F1id, "")
+@Html.Hidden("Cid", ViewBag.Cid, "")
+<div class="k-window-body">
+    <div id="divF3RenameForm" class="k-window-body-form">
+        <div class="tiny_loading"></div>
+    </div>
+</div>
+<div class="k-window-footer">
+    <button type="button" class="btn  btn-primary waves-effect" id="btnF3RenameOk"><i class="fa fa-check"></i>&nbsp;Ok</button>
+    <button type="reset" class="btn  btn-info waves-effect" id="btnF3RenameRefresh"><i class="fa fa-refresh"></i>&nbsp;Refresh</button>
+    <button type="button" class="btn bg-red waves-effect" id="btnF3RenameCancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+</div>
+<script src="~/js/Document/f3Rename.min.js"></script>

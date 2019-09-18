@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Cabinet";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/bg-page-content.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Cabinet', '/Document/CabinetTile' )">Cabinet</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div class="card">
+        <div class="header">
+            <div style="width:48%!important; float:left">
+                <h3 class="col-deep-green">
+                    <strong>Cabinet</strong> List
+                </h3>
+            </div>
+        </div>
+        <div class="body" oncontextmenu="return false">
+            <div class="row form-group">
+                <div id="divCabinetFolderList" class="min-h-1">
+                    <div class="loading_partial"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cmenu">
+    <ul class="cmenu-options"></ul>
+</div>
+<script src="~/js/Document/Cabinet Tile/cabinetTile.min.js"></script>

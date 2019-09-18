@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Role List";
+    Layout = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest" ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/kendoGrid.min.css" rel="stylesheet" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-list-ul"></i>
+            <a onclick="onAjaxLoad('Role List', '/Configuration/RoleList' )">Role List</a>
+        </li>
+    </ul>
+</div>
+<div class="portal-content">
+    <div id="divRoleGrid"></div>
+</div>
+<div id="divRoleEditWin"></div>
+<script type="text/x-kendo-template" id="GridHeadertemplate">
+    <div class="row">
+        <div class="col-md-4">
+            <input id="roleMultiselect" class="margin-bottom" />
+            <span class="k-icon k-i-search search-icon-left"></span>
+        </div>
+        <div class="col-md-3 pull-right">
+            <div class="pull-right">
+                <a href="/Configuration/RoleCreate" id="btnCreateRole" class="btn btn-primary waves-effect" data-toggle="tooltip" title="Create new role"><i class="fa fa-plus"></i> Create</a>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="temp_win_delete_entry" type="text/x-kendo-template">
+    <div style="padding:1em;">
+        <p style="font-size: 14px; padding: 10px" class="col-red"> #=msg# </p>
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info waves-effect" id="btn_delete_Entry_noty_ok"><i class="fa fa-check"></i>&nbsp;OK</button>
+            <button type="button" class="btn btn-danger waves-effect" id="btn_delete_Entry_noty_cancel"><i class="fa fa-times"></i>&nbsp;Cancel</button>
+        </div>
+    </div>
+</script>
+<script src="~/js/Configuration/Role/role.min.js"></script>
